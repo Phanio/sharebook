@@ -25,6 +25,10 @@ public class BookService {
         return books;
     }
 
+    public Iterable<Book> getAllBooks(){
+        return bookRepository.findAll();
+    }
+
     public Book getBook(Long id){
         return bookRepository.findById(id).get();
     }
